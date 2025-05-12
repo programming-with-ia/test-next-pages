@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Next.js on GitHub Pages',
-  description: 'Deploy your static Next.js site to GitHub Pages.',
+  title: "Next.js on GitHub Pages",
+  description: "Deploy your static Next.js site to GitHub Pages.",
 };
 
 export default function RootLayout({
@@ -12,7 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Link href="/test">Test</Link>
+        <Link href="/">Home</Link>
+        {children}
+      </body>
     </html>
   );
 }
