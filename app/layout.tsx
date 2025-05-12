@@ -14,8 +14,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Link href="/test">Test</Link>
-        <Link href="/">Home</Link>
+        <Link href="/test" prefetch={false}>
+          Test
+        </Link>
+        <Link href="/" prefetch={false}>
+          Home
+        </Link>
         {children}
       </body>
     </html>
